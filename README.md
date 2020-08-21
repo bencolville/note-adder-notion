@@ -3,7 +3,7 @@ This simple python script is designed to be run from the CLI with user input and
 To do:
 - [X] make it work
 - [X] make it into a global script to be called from any directory
-- [] improve it so it can grab the v2 token on its own? 
+- [X] improve it so it can grab the v2 token on its own? 
 
 
 ## Making the script available everywhere
