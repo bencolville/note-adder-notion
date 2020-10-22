@@ -1,4 +1,2 @@
-pandoc-citation-test.md
-notion-scr.py
-safety-briefing.md
-v2.txt
+test.md
+*.txt
