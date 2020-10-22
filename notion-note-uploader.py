@@ -4,6 +4,7 @@ from notion.client import NotionClient
 from notion.block import *
 from md2notion.upload import upload
 
+# open the file to retrieve token_v2
 
 with open("v2.txt") as f:
     mylist = f.read().splitlines()
@@ -12,9 +13,13 @@ v2=mylist[0]
 
 client = NotionClient(token_v2=v2)
 
-#client = NotionClient(token_v2="c623dcd5b65d87ab04eb416df760ce94408af158fec35d8afd29ef05f1e68cc03edf242dafd8a5ddda5de7d2db84e3f3c5554bd7725a92548ed24015ca25c2ec0090e3a53206e1e18ecb81eccba2")
+# get user input for destination of upload
 
-NotePage = client.get_block("https://www.notion.so/3d3221983e854791bf6a8e6e01b2664c?v=007d4713000144d584531e4efa8b22fe")
+UploadDestination = input("Link to page you wish to upload to: \n")
+
+NotePage = client.get_block(UploadDestination)
+
+# get user input for name of file to be uploaded
 
 file_to_upload = input("Name of file to upload (with extension): \n")
 title_of_file = file_to_upload[:-3]
